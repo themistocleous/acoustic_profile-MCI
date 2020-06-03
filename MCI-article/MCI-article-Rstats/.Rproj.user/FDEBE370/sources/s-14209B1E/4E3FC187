@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1584115161751.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "4E3FC187",
+    "lastKnownWriteTime" : 1586961262,
+    "last_content_update" : 1586961262160,
+    "path" : "~/Documents/article-MCI_paper/MCI-article-stats/MCI-article-Rstats/MCI-article-stats.R",
+    "project_path" : "MCI-article-stats.R",
+    "properties" : {
+        "cursorPosition" : "8,23",
+        "scrollLine" : "9"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
