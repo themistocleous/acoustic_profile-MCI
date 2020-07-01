@@ -47,7 +47,7 @@ haristheme <- theme(panel.background = element_rect(fill = "white", colour = "wh
                     legend.position = "none", text = element_text(size=18), 
                     plot.title = element_text(hjust = 0.5))
 # Open Data ----------------------------------------------------
-v <- read.csv("data/final.csv")
+v <- read.csv("data/speechrate_data.csv")
 v <- v[!v$soundname == "LABM-75GG-5KH4",] 
 v <- v[!v$Materials == "new_random",]
 summary(is.na(v))
