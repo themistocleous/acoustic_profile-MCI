@@ -20,5 +20,5 @@ Voice quality and phonation elicited from audio recordings produced by patients 
 
 # Additional Scripts
 - ![Praat Scripts](MCI-article/praat_scripts) were employed in the acoustic analysis.
-- The acoustic analysis was conducted using [Praat][https://www.fon.hum.uva.nl/praat/]
+- The acoustic analysis was conducted using ![Praat](https://www.fon.hum.uva.nl/praat/).
 
