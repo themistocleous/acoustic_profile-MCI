@@ -1,10 +1,5 @@
-################################################
-# this is the old file - not the one employed in the journal
-################################################
-
 # Clear Memory
 rm(list = ls(all.names = TRUE))
-#sink("vowel_stats_output_11_Aug_2018.txt")
 set.seed(1000)
 # Import Libraries in R
 library("ggplot2")
@@ -25,7 +20,6 @@ library("plyr") # for renaming
 library("xtable")
 library("ggsignif")
 library("plyr")
-
 
 # Printing
 options(xtable.floating = FALSE)
@@ -53,7 +47,7 @@ haristheme <- theme(panel.background = element_rect(fill = "white", colour = "wh
                     legend.position = "none", text = element_text(size=18), 
                     plot.title = element_text(hjust = 0.5))
 # Open Data ----------------------------------------------------
-v <- read.csv("final.csv")
+v <- read.csv("data/final.csv")
 v <- v[!v$soundname == "LABM-75GG-5KH4",] 
 v <- v[!v$Materials == "new_random",]
 summary(is.na(v))
@@ -123,9 +117,6 @@ apa.reg.table(speechrate..nsyll.dur.m, filename = "Averaged Speaking Time.doc", 
 boxplot(MCI_HC$speechrate..nsyll.dur.m~MCI_HC$condition)
 
 
-
-
-
 speaking = lm(MCI_HC$ASD..speakingtime.nsyll.~MCI_HC$condition)
 summary(speaking)
 plot_model(speaking, type = "pred",  terms = c("condition"))
@@ -171,21 +162,6 @@ summary(articulation_rate)
 apa.reg.table(articulation_rate, filename = "Articulation_Rate.doc", table.number = 2)
 
 
-articulation_rate_plot = ggplot(MCI_HC, aes(x = condition, y = articulation.rate..nsyll...phonationtime.)) + 
-  #  stat_summary(fun.y = mean, geom = "point") +
-  geom_boxplot(aes(fill = condition), outlier.shape = NA) +
-  ggtitle("Articulation Rate") +
-  scale_x_discrete(name = "Condition")  + 
-  scale_fill_brewer(palette = "Blues") +
-  geom_signif(comparisons = list(c("HC", "MCI")), annotation=formatC("**", digits=4),  textsize=6) +
-  scale_y_continuous(limits = quantile(MCI_HC$ASD..speakingtime.nsyll., c(0.1, 0.9))) +
-  labs(
-    fill = "condition",
-    x = "Condition",
-    y = "Articulation Rate"
-  ) + theme_classic()+
-  theme(legend.position="top", legend.title = element_blank(), text = element_text(size=20), plot.title = element_text(hjust = 0.5),panel.grid.major = element_blank(), panel.grid.minor = element_blank()) 
-articulation_rate_plot
 
 pd <- position_dodge(0.1) # move them .05 to the left and right
 articulation.rate..nsyll...phonationtime._ci <- summarySE(MCI_HC, measurevar="articulation.rate..nsyll...phonationtime.", groupvars=c("condition"), na.rm=TRUE)
