@@ -13,6 +13,6 @@ Voice quality and phonation elicited from audio recordings produced by patients 
  Measures of speech fluency elicited from audio recordings produced by patients with MCI and HC. 
 
 # Additional Scripts
-Praat Scripts were employed in the acoustic analysis.
-The acoustic analysis was conducted using [Praat][https://www.fon.hum.uva.nl/praat/]
+- ![Praat Scripts](MCI-article/praat_scripts) were employed in the acoustic analysis.
+- The acoustic analysis was conducted using [Praat][https://www.fon.hum.uva.nl/praat/]
 
